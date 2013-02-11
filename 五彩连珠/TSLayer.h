@@ -11,6 +11,7 @@
 
 @interface TSLayer : CCLayer {
     CCSprite* m_Player;
+    CGPoint m_Velocity;
 }
 +(id) scene;
 +(CGPoint) locationFromTouches:(NSSet*)touches;

@@ -25,7 +25,7 @@
     if (self = [super init]) {
         CCLOG(@"%@: %@", NSStringFromSelector(_cmd), self);
         
-        //self.isAccelerometerEnabled = YES;
+        self.isAccelerometerEnabled = YES;
         self.isTouchEnabled = YES;
         m_Player = [CCSprite spriteWithFile:@"alien.png"];
         [self addChild:m_Player z:0 tag:1];
@@ -74,12 +74,39 @@
 {
     
 }
-//-(void) accelerometer:(UIAccelerometer *)accelerometer
-//        didAccelerate:(UIAcceleration *)acceleration
-//{
-//    CGPoint pos = m_Player.position;
-//    pos.x += acceleration.x * 10;
-//    m_Player.position = pos;
-//}
+
+//重力感应
+-(void) accelerometer:(UIAccelerometer *)accelerometer
+        didAccelerate:(UIAcceleration *)acceleration
+{
+    
+    float deceleration = 0.4f;
+    float sensitivity = 6.0f;
+    float maxVelocity = 100;
+    
+    // 基于当前加速计的加速度调整速度
+    m_Velocity.x = m_Velocity.x * deceleration + acceleration.x * sensitivity;
+    // 我们必须在两个方向上都限制主角精灵的最大速度值
+    if (m_Velocity.x > maxVelocity)
+    {
+        m_Velocity.x = maxVelocity;
+    }
+    else if (m_Velocity.x < -maxVelocity)
+    {
+        m_Velocity.x = -maxVelocity;
+    }
+    
+    // 基于当前加速计的加速度调整速度
+    m_Velocity.y = m_Velocity.y * deceleration + acceleration.y * sensitivity;
+    // 我们必须在两个方向上都限制主角精灵的最大速度值
+    if (m_Velocity.y > maxVelocity)
+    {
+        m_Velocity.y = maxVelocity;
+    }
+    else if (m_Velocity.y < -maxVelocity)
+    {
+        m_Velocity.y = -maxVelocity;
+    }
+}
 
 @end
