@@ -27,6 +27,9 @@
         
         self.isAccelerometerEnabled = YES;
         self.isTouchEnabled = YES;
+        [self scheduleUpdate];
+        
+        
         m_Player = [CCSprite spriteWithFile:@"alien.png"];
         [self addChild:m_Player z:0 tag:1];
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
@@ -79,13 +82,13 @@
 -(void) accelerometer:(UIAccelerometer *)accelerometer
         didAccelerate:(UIAcceleration *)acceleration
 {
-    
     float deceleration = 0.4f;
     float sensitivity = 6.0f;
     float maxVelocity = 100;
     
     // 基于当前加速计的加速度调整速度
     m_Velocity.x = m_Velocity.x * deceleration + acceleration.x * sensitivity;
+    
     // 我们必须在两个方向上都限制主角精灵的最大速度值
     if (m_Velocity.x > maxVelocity)
     {
@@ -98,6 +101,7 @@
     
     // 基于当前加速计的加速度调整速度
     m_Velocity.y = m_Velocity.y * deceleration + acceleration.y * sensitivity;
+    
     // 我们必须在两个方向上都限制主角精灵的最大速度值
     if (m_Velocity.y > maxVelocity)
     {
@@ -107,6 +111,49 @@
     {
         m_Velocity.y = -maxVelocity;
     }
+}
+
+-(void) update:(ccTime)delta
+{
+    // 用playerVelocity持续增加主角精灵的位置信息
+    CGPoint pos = m_Player.position;
+    pos.x += m_Velocity.x;
+    pos.y += m_Velocity.y;
+    
+    // 如果主角精灵移动到了屏幕以外的话,它应该被停止
+    CGSize screenSize = [[CCDirector sharedDirector] winSize];
+    float imageWidthHalved = [m_Player texture].contentSize.width * 0.5f;
+    float imageHeightHalved = [m_Player texture].contentSize.height * 0.5f;
+    float leftBorderLimit = imageWidthHalved;
+    float rightBorderLimit = screenSize.width - imageWidthHalved;
+    float topBorderLimit = imageHeightHalved;
+    float bottomBorderLimit = screenSize.height - imageHeightHalved;
+    
+    // 以防主角精灵移动到屏幕以外
+    if (pos.x < leftBorderLimit)
+    {
+        pos.x = leftBorderLimit;
+        //m_Velocity = CGPointZero;
+    }
+    else if (pos.x > rightBorderLimit)
+    {
+        pos.x = rightBorderLimit;
+        //m_Velocity = CGPointZero;
+    }
+    
+    if (pos.y < topBorderLimit)
+    {
+        pos.y = topBorderLimit;
+        //m_Velocity = CGPointZero;
+    }
+    else if (pos.y > bottomBorderLimit)
+    {
+        pos.y = bottomBorderLimit;
+        //m_Velocity = CGPointZero;
+    }
+    
+    // 将更新过的位置信息赋值给主角精灵
+    m_Player.position = pos;
 }
 
 @end

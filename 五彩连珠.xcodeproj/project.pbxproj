@@ -132,7 +132,6 @@
 		307D089116C8D0FD008A6F2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D089016C8D0FD008A6F2A /* main.m */; };
 		307D089416C8D0FD008A6F2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D089316C8D0FD008A6F2A /* AppDelegate.m */; };
 		307D089A16C8D0FD008A6F2A /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D089916C8D0FD008A6F2A /* IntroLayer.m */; };
-		307D08A216C8D1A7008A6F2A /* TSGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D08A116C8D1A7008A6F2A /* TSGame.m */; };
 		307D08A816C8D2F9008A6F2A /* TSLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D08A716C8D2F9008A6F2A /* TSLayer.m */; };
 		307D08AA16C8D56B008A6F2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D08A916C8D56B008A6F2A /* Default-568h@2x.png */; };
 		307D08AC16C8D925008A6F2A /* alien.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D08AB16C8D925008A6F2A /* alien.png */; };
@@ -399,8 +398,6 @@
 		307D089316C8D0FD008A6F2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		307D089816C8D0FD008A6F2A /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		307D089916C8D0FD008A6F2A /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		307D08A016C8D1A7008A6F2A /* TSGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSGame.h; sourceTree = "<group>"; };
-		307D08A116C8D1A7008A6F2A /* TSGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSGame.m; sourceTree = "<group>"; };
 		307D08A616C8D2F9008A6F2A /* TSLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLayer.h; sourceTree = "<group>"; };
 		307D08A716C8D2F9008A6F2A /* TSLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLayer.m; sourceTree = "<group>"; };
 		307D08A916C8D56B008A6F2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -471,8 +468,6 @@
 				307D071B16C8D0FB008A6F2A /* Resources */,
 				307D073516C8D0FB008A6F2A /* libs */,
 				307D088E16C8D0FD008A6F2A /* Supporting Files */,
-				307D08A016C8D1A7008A6F2A /* TSGame.h */,
-				307D08A116C8D1A7008A6F2A /* TSGame.m */,
 				307D08A616C8D2F9008A6F2A /* TSLayer.h */,
 				307D08A716C8D2F9008A6F2A /* TSLayer.m */,
 			);
@@ -1038,7 +1033,6 @@
 				307D089116C8D0FD008A6F2A /* main.m in Sources */,
 				307D089416C8D0FD008A6F2A /* AppDelegate.m in Sources */,
 				307D089A16C8D0FD008A6F2A /* IntroLayer.m in Sources */,
-				307D08A216C8D1A7008A6F2A /* TSGame.m in Sources */,
 				307D08A816C8D2F9008A6F2A /* TSLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1101,6 +1095,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1119,6 +1114,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
