@@ -129,15 +129,19 @@
 		307D088816C8D0FD008A6F2A /* vec2.c in Sources */ = {isa = PBXBuildFile; fileRef = 307D088716C8D0FD008A6F2A /* vec2.c */; };
 		307D088A16C8D0FD008A6F2A /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 307D088916C8D0FD008A6F2A /* vec3.c */; };
 		307D088C16C8D0FD008A6F2A /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 307D088B16C8D0FD008A6F2A /* vec4.c */; };
-		307D089116C8D0FD008A6F2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D089016C8D0FD008A6F2A /* main.m */; };
+		307D089116C8D0FD008A6F2A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 307D089016C8D0FD008A6F2A /* main.mm */; };
 		307D089416C8D0FD008A6F2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D089316C8D0FD008A6F2A /* AppDelegate.m */; };
 		307D089A16C8D0FD008A6F2A /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D089916C8D0FD008A6F2A /* IntroLayer.m */; };
-		307D08A816C8D2F9008A6F2A /* TSLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D08A716C8D2F9008A6F2A /* TSLayer.m */; };
+		307D08A816C8D2F9008A6F2A /* TSLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 307D08A716C8D2F9008A6F2A /* TSLayer.mm */; };
 		307D08AA16C8D56B008A6F2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D08A916C8D56B008A6F2A /* Default-568h@2x.png */; };
 		307D08AC16C8D925008A6F2A /* alien.png in Resources */ = {isa = PBXBuildFile; fileRef = 307D08AB16C8D925008A6F2A /* alien.png */; };
+		3087A6CA16CA1146003C4ADF /* TSMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6C816CA1146003C4ADF /* TSMesh.mm */; };
+		3087A6CD16CA118D003C4ADF /* TSBlock.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6CB16CA118D003C4ADF /* TSBlock.mm */; };
+		3087A6D116CA15DC003C4ADF /* TSSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6CF16CA15DC003C4ADF /* TSSprite.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		305BF6DA16CA2421009EBF90 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		307D070416C8D0FB008A6F2A /* 五彩连珠.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "五彩连珠.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		307D070816C8D0FB008A6F2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		307D070A16C8D0FB008A6F2A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -393,15 +397,21 @@
 		307D088B16C8D0FD008A6F2A /* vec4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = vec4.c; path = libs/kazmath/src/vec4.c; sourceTree = "<group>"; };
 		307D088D16C8D0FD008A6F2A /* LICENSE_Kazmath.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_Kazmath.txt; path = libs/LICENSE_Kazmath.txt; sourceTree = "<group>"; };
 		307D088F16C8D0FD008A6F2A /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		307D089016C8D0FD008A6F2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		307D089016C8D0FD008A6F2A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		307D089216C8D0FD008A6F2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		307D089316C8D0FD008A6F2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		307D089816C8D0FD008A6F2A /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		307D089916C8D0FD008A6F2A /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		307D08A616C8D2F9008A6F2A /* TSLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLayer.h; sourceTree = "<group>"; };
-		307D08A716C8D2F9008A6F2A /* TSLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLayer.m; sourceTree = "<group>"; };
+		307D08A716C8D2F9008A6F2A /* TSLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSLayer.mm; sourceTree = "<group>"; };
 		307D08A916C8D56B008A6F2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		307D08AB16C8D925008A6F2A /* alien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alien.png; path = Resources/alien.png; sourceTree = "<group>"; };
+		3087A6C816CA1146003C4ADF /* TSMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSMesh.mm; sourceTree = "<group>"; };
+		3087A6C916CA1146003C4ADF /* TSMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMesh.h; sourceTree = "<group>"; };
+		3087A6CB16CA118D003C4ADF /* TSBlock.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSBlock.mm; sourceTree = "<group>"; };
+		3087A6CC16CA118D003C4ADF /* TSBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBlock.h; sourceTree = "<group>"; };
+		3087A6CF16CA15DC003C4ADF /* TSSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSSprite.mm; sourceTree = "<group>"; };
+		3087A6D016CA15DC003C4ADF /* TSSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSprite.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,15 +471,14 @@
 		307D071A16C8D0FB008A6F2A /* 五彩连珠 */ = {
 			isa = PBXGroup;
 			children = (
+				3087A6CE16CA120B003C4ADF /* TSGame */,
+				307D071B16C8D0FB008A6F2A /* Resources */,
+				307D073516C8D0FB008A6F2A /* libs */,
+				307D088E16C8D0FD008A6F2A /* Supporting Files */,
 				307D089216C8D0FD008A6F2A /* AppDelegate.h */,
 				307D089316C8D0FD008A6F2A /* AppDelegate.m */,
 				307D089816C8D0FD008A6F2A /* IntroLayer.h */,
 				307D089916C8D0FD008A6F2A /* IntroLayer.m */,
-				307D071B16C8D0FB008A6F2A /* Resources */,
-				307D073516C8D0FB008A6F2A /* libs */,
-				307D088E16C8D0FD008A6F2A /* Supporting Files */,
-				307D08A616C8D2F9008A6F2A /* TSLayer.h */,
-				307D08A716C8D2F9008A6F2A /* TSLayer.m */,
 			);
 			path = "五彩连珠";
 			sourceTree = "<group>";
@@ -833,9 +842,25 @@
 			isa = PBXGroup;
 			children = (
 				307D088F16C8D0FD008A6F2A /* Prefix.pch */,
-				307D089016C8D0FD008A6F2A /* main.m */,
+				307D089016C8D0FD008A6F2A /* main.mm */,
+				305BF6DA16CA2421009EBF90 /* main.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3087A6CE16CA120B003C4ADF /* TSGame */ = {
+			isa = PBXGroup;
+			children = (
+				307D08A716C8D2F9008A6F2A /* TSLayer.mm */,
+				307D08A616C8D2F9008A6F2A /* TSLayer.h */,
+				3087A6CB16CA118D003C4ADF /* TSBlock.mm */,
+				3087A6CC16CA118D003C4ADF /* TSBlock.h */,
+				3087A6C816CA1146003C4ADF /* TSMesh.mm */,
+				3087A6C916CA1146003C4ADF /* TSMesh.h */,
+				3087A6CF16CA15DC003C4ADF /* TSSprite.mm */,
+				3087A6D016CA15DC003C4ADF /* TSSprite.h */,
+			);
+			name = TSGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1030,10 +1055,13 @@
 				307D088816C8D0FD008A6F2A /* vec2.c in Sources */,
 				307D088A16C8D0FD008A6F2A /* vec3.c in Sources */,
 				307D088C16C8D0FD008A6F2A /* vec4.c in Sources */,
-				307D089116C8D0FD008A6F2A /* main.m in Sources */,
+				307D089116C8D0FD008A6F2A /* main.mm in Sources */,
 				307D089416C8D0FD008A6F2A /* AppDelegate.m in Sources */,
 				307D089A16C8D0FD008A6F2A /* IntroLayer.m in Sources */,
-				307D08A816C8D2F9008A6F2A /* TSLayer.m in Sources */,
+				307D08A816C8D2F9008A6F2A /* TSLayer.mm in Sources */,
+				3087A6CA16CA1146003C4ADF /* TSMesh.mm in Sources */,
+				3087A6CD16CA118D003C4ADF /* TSBlock.mm in Sources */,
+				3087A6D116CA15DC003C4ADF /* TSSprite.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1139,6 +1167,7 @@
 				307D089F16C8D0FD008A6F2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

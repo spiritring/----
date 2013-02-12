@@ -5,12 +5,15 @@
 //  Created by TSEnel on 13-2-11.
 //  Copyright 2013年 __MyCompanyName__. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface TSLayer : CCLayer {
-    CCSprite* m_Player;
+@class ITSSprite;
+
+@interface TSLayer : CCLayer
+{    
+@public
+    ITSSprite* m_Player;
     CGPoint m_Velocity;
 }
 +(id) scene;

@@ -8,7 +8,36 @@
 
 #import "TSLayer.h"
 
+#include "TSSprite.h"
 
+// 发布到.h
+@interface ITSSprite : CCSprite
+{
+@public
+    TSSprite P;
+}
+@end
+
+@implementation ITSSprite
+
+-(id) init
+{
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+-(void) dealloc
+{
+    [super dealloc];
+}
+
+@end
+
+
+
+// 游戏层
 @implementation TSLayer
 
 +(id) scene
@@ -29,13 +58,12 @@
         self.isTouchEnabled = YES;
         [self scheduleUpdate];
         
+        m_Player = [CCSprite spriteWithFile:@"Icon-72.png"];
         
-        m_Player = [CCSprite spriteWithFile:@"alien.png"];
         [self addChild:m_Player z:0 tag:1];
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
         float imageHeight = [m_Player texture].contentSize.height;
         m_Player.position = CGPointMake(screenSize.width / 2, imageHeight / 2);
-        
     }
     
     return self;
