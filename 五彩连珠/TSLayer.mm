@@ -9,6 +9,7 @@
 #import "TSLayer.h"
 
 #include "TSSprite.h"
+#include <GLKit/GLKit.h>
 
 // 发布到.h
 @interface ITSSprite : CCSprite
@@ -182,6 +183,39 @@
     
     // 将更新过的位置信息赋值给主角精灵
     m_Player.position = pos;
+}
+
+-(void) draw
+{
+    CGSize screenSize = [[CCDirector sharedDirector] winSize];
+    
+    int vmax = 5;
+    int xp = screenSize.width / vmax;
+    int yp = screenSize.height / vmax;
+    
+    // 竖
+    ccDrawColor4F(1, 1, 0, 1);
+    glLineWidth(10);
+    for (int i = 0 ; i <= vmax; i++) {
+        CGPoint pBegin = CGPointMake(i*xp,0);
+        CGPoint pEnd = CGPointMake(i*xp,screenSize.height);
+        ccDrawLine(pBegin, pEnd);
+    }
+    
+    // 横
+    for (int i = 0 ; i <= vmax; i++) {
+        CGPoint pBegin = CGPointMake(0,i*yp);
+        CGPoint pEnd = CGPointMake(screenSize.width,i*yp);
+        ccDrawLine(pBegin, pEnd);
+    }
+    
+    CGPoint pBegin = CGPointMake(1,0);
+    CGPoint pEnd = CGPointMake(1,screenSize.height);
+    ccDrawLine(pBegin, pEnd);
+    
+    pBegin = CGPointMake(0,screenSize.height-1);
+    pEnd = CGPointMake(screenSize.width,screenSize.height-1);
+    ccDrawLine(pBegin, pEnd);
 }
 
 @end
