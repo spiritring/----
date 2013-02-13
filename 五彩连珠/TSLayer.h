@@ -14,6 +14,8 @@
 {    
 @public
     ITSSprite* m_Player;
+    ITSSprite* m_Mesh;
+    ITSSprite* m_BackGround;
     CGPoint m_Velocity;
 }
 +(id) scene;

@@ -59,12 +59,29 @@
         self.isTouchEnabled = YES;
         [self scheduleUpdate];
         
-        m_Player = [CCSprite spriteWithFile:@"Icon-72.png"];
+        m_BackGround = [CCSprite spriteWithFile:@"background.png"];
+        m_Mesh = [CCSprite spriteWithFile:@"board.png"];
+        m_Player = [CCSprite spriteWithFile:@"chess2.png"];
         
+        float contentSize = m_Player.contentSize.width;
+        m_Player.scale = 36/contentSize;
+        m_Player.textureRect = CGRectMake(0, 0, 36, 36);
+        
+        [self addChild:m_BackGround z:0 tag:1000];
+        [self addChild:m_Mesh z:0 tag:1001];
         [self addChild:m_Player z:0 tag:1];
+        
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
-        float imageHeight = [m_Player texture].contentSize.height;
+        float imageHeight = 0;
+        
+        imageHeight = [m_Player texture].contentSize.height;
         m_Player.position = CGPointMake(screenSize.width / 2, imageHeight / 2);
+        
+        imageHeight = [m_BackGround texture].contentSize.height;
+        m_BackGround.position = CGPointMake(screenSize.width / 2, screenSize.height / 2);
+        
+        imageHeight = [m_Mesh texture].contentSize.height;
+        m_Mesh.position = CGPointMake(screenSize.width / 2, screenSize.height / 2);
     }
     
     return self;
@@ -187,35 +204,35 @@
 
 -(void) draw
 {
-    CGSize screenSize = [[CCDirector sharedDirector] winSize];
-    
-    int vmax = 5;
-    int xp = screenSize.width / vmax;
-    int yp = screenSize.height / vmax;
-    
-    // 竖
-    ccDrawColor4F(1, 1, 0, 1);
-    glLineWidth(10);
-    for (int i = 0 ; i <= vmax; i++) {
-        CGPoint pBegin = CGPointMake(i*xp,0);
-        CGPoint pEnd = CGPointMake(i*xp,screenSize.height);
-        ccDrawLine(pBegin, pEnd);
-    }
-    
-    // 横
-    for (int i = 0 ; i <= vmax; i++) {
-        CGPoint pBegin = CGPointMake(0,i*yp);
-        CGPoint pEnd = CGPointMake(screenSize.width,i*yp);
-        ccDrawLine(pBegin, pEnd);
-    }
-    
-    CGPoint pBegin = CGPointMake(1,0);
-    CGPoint pEnd = CGPointMake(1,screenSize.height);
-    ccDrawLine(pBegin, pEnd);
-    
-    pBegin = CGPointMake(0,screenSize.height-1);
-    pEnd = CGPointMake(screenSize.width,screenSize.height-1);
-    ccDrawLine(pBegin, pEnd);
+//    CGSize screenSize = [[CCDirector sharedDirector] winSize];
+//    
+//    int vmax = 5;
+//    int xp = screenSize.width / vmax;
+//    int yp = screenSize.height / vmax;
+//    
+//    // 竖
+//    ccDrawColor4F(1, 1, 0, 1);
+//    glLineWidth(10);
+//    for (int i = 0 ; i <= vmax; i++) {
+//        CGPoint pBegin = CGPointMake(i*xp,0);
+//        CGPoint pEnd = CGPointMake(i*xp,screenSize.height);
+//        ccDrawLine(pBegin, pEnd);
+//    }
+//    
+//    // 横
+//    for (int i = 0 ; i <= vmax; i++) {
+//        CGPoint pBegin = CGPointMake(0,i*yp);
+//        CGPoint pEnd = CGPointMake(screenSize.width,i*yp);
+//        ccDrawLine(pBegin, pEnd);
+//    }
+//    
+//    CGPoint pBegin = CGPointMake(1,0);
+//    CGPoint pEnd = CGPointMake(1,screenSize.height);
+//    ccDrawLine(pBegin, pEnd);
+//    
+//    pBegin = CGPointMake(0,screenSize.height-1);
+//    pEnd = CGPointMake(screenSize.width,screenSize.height-1);
+//    ccDrawLine(pBegin, pEnd);
 }
 
 @end

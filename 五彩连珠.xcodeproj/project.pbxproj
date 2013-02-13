@@ -138,6 +138,17 @@
 		3087A6CA16CA1146003C4ADF /* TSMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6C816CA1146003C4ADF /* TSMesh.mm */; };
 		3087A6CD16CA118D003C4ADF /* TSBlock.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6CB16CA118D003C4ADF /* TSBlock.mm */; };
 		3087A6D116CA15DC003C4ADF /* TSSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6CF16CA15DC003C4ADF /* TSSprite.mm */; };
+		30A0FCE516CB741B0038A638 /* chess0_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCDC16CB741B0038A638 /* chess0_iPad.png */; };
+		30A0FCE616CB741B0038A638 /* chess0.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCDD16CB741B0038A638 /* chess0.png */; };
+		30A0FCE716CB741B0038A638 /* chess0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCDE16CB741B0038A638 /* chess0@2x.png */; };
+		30A0FCE816CB741B0038A638 /* chess1_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCDF16CB741B0038A638 /* chess1_iPad.png */; };
+		30A0FCE916CB741B0038A638 /* chess1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCE016CB741B0038A638 /* chess1.png */; };
+		30A0FCEA16CB741B0038A638 /* chess1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCE116CB741B0038A638 /* chess1@2x.png */; };
+		30A0FCEB16CB741B0038A638 /* chess2_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCE216CB741B0038A638 /* chess2_iPad.png */; };
+		30A0FCEC16CB741B0038A638 /* chess2.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCE316CB741B0038A638 /* chess2.png */; };
+		30A0FCED16CB741B0038A638 /* chess2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCE416CB741B0038A638 /* chess2@2x.png */; };
+		30A0FCF116CB756D0038A638 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCEF16CB756D0038A638 /* background.png */; };
+		30A0FCF216CB756D0038A638 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 30A0FCF016CB756D0038A638 /* board.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -412,6 +423,17 @@
 		3087A6CC16CA118D003C4ADF /* TSBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBlock.h; sourceTree = "<group>"; };
 		3087A6CF16CA15DC003C4ADF /* TSSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSSprite.mm; sourceTree = "<group>"; };
 		3087A6D016CA15DC003C4ADF /* TSSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSprite.h; sourceTree = "<group>"; };
+		30A0FCDC16CB741B0038A638 /* chess0_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chess0_iPad.png; path = Resources/chess0_iPad.png; sourceTree = "<group>"; };
+		30A0FCDD16CB741B0038A638 /* chess0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chess0.png; path = Resources/chess0.png; sourceTree = "<group>"; };
+		30A0FCDE16CB741B0038A638 /* chess0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chess0@2x.png"; path = "Resources/chess0@2x.png"; sourceTree = "<group>"; };
+		30A0FCDF16CB741B0038A638 /* chess1_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chess1_iPad.png; path = Resources/chess1_iPad.png; sourceTree = "<group>"; };
+		30A0FCE016CB741B0038A638 /* chess1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chess1.png; path = Resources/chess1.png; sourceTree = "<group>"; };
+		30A0FCE116CB741B0038A638 /* chess1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chess1@2x.png"; path = "Resources/chess1@2x.png"; sourceTree = "<group>"; };
+		30A0FCE216CB741B0038A638 /* chess2_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chess2_iPad.png; path = Resources/chess2_iPad.png; sourceTree = "<group>"; };
+		30A0FCE316CB741B0038A638 /* chess2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chess2.png; path = Resources/chess2.png; sourceTree = "<group>"; };
+		30A0FCE416CB741B0038A638 /* chess2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chess2@2x.png"; path = "Resources/chess2@2x.png"; sourceTree = "<group>"; };
+		30A0FCEF16CB756D0038A638 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
+		30A0FCF016CB756D0038A638 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = board.png; path = Resources/board.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,6 +508,17 @@
 		307D071B16C8D0FB008A6F2A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30A0FCEF16CB756D0038A638 /* background.png */,
+				30A0FCF016CB756D0038A638 /* board.png */,
+				30A0FCDC16CB741B0038A638 /* chess0_iPad.png */,
+				30A0FCDD16CB741B0038A638 /* chess0.png */,
+				30A0FCDE16CB741B0038A638 /* chess0@2x.png */,
+				30A0FCDF16CB741B0038A638 /* chess1_iPad.png */,
+				30A0FCE016CB741B0038A638 /* chess1.png */,
+				30A0FCE116CB741B0038A638 /* chess1@2x.png */,
+				30A0FCE216CB741B0038A638 /* chess2_iPad.png */,
+				30A0FCE316CB741B0038A638 /* chess2.png */,
+				30A0FCE416CB741B0038A638 /* chess2@2x.png */,
 				307D08AB16C8D925008A6F2A /* alien.png */,
 				307D071C16C8D0FB008A6F2A /* Default.png */,
 				307D071E16C8D0FB008A6F2A /* Default-Landscape~ipad.png */,
@@ -929,6 +962,17 @@
 				307D087216C8D0FD008A6F2A /* ChangeLog in Resources */,
 				307D08AA16C8D56B008A6F2A /* Default-568h@2x.png in Resources */,
 				307D08AC16C8D925008A6F2A /* alien.png in Resources */,
+				30A0FCE516CB741B0038A638 /* chess0_iPad.png in Resources */,
+				30A0FCE616CB741B0038A638 /* chess0.png in Resources */,
+				30A0FCE716CB741B0038A638 /* chess0@2x.png in Resources */,
+				30A0FCE816CB741B0038A638 /* chess1_iPad.png in Resources */,
+				30A0FCE916CB741B0038A638 /* chess1.png in Resources */,
+				30A0FCEA16CB741B0038A638 /* chess1@2x.png in Resources */,
+				30A0FCEB16CB741B0038A638 /* chess2_iPad.png in Resources */,
+				30A0FCEC16CB741B0038A638 /* chess2.png in Resources */,
+				30A0FCED16CB741B0038A638 /* chess2@2x.png in Resources */,
+				30A0FCF116CB756D0038A638 /* background.png in Resources */,
+				30A0FCF216CB756D0038A638 /* board.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
